@@ -1,28 +1,20 @@
-form {
-	text-align: center;
+div {
+	display: block;
+}
+
+h1 {
+	font-size: 12px;
 }
 
 h1,
 h2 {
 	text-align: center;
 }
-h3 {
-	font-size: 5px;
-}
-p {
-	text-align: center;
-	font-size: 10px;
-}
 
 .app {
-	display: block;
-	margin: 20px;
-	padding: 50px, 30px, 150px, 30px;
-	border: solid 5px#8f71ff;
-	max-width: 500px;
-}
-
-.searchBar {
-	margin: 5px;
-	border-radius: 5px;
+	padding: 20px;
+	margin: 40px auto;
+	border: solid 5px coral;
+	background-color: white;
+	border-radius: 20px;
 }
