@@ -5,23 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="src/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ultra&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="src/style.css" />
 </head>
 <body>
     <div class="container app">
     <form>
         <input type="text" placeholder="Type a city here" autocomplete="off" autofocus="on" class="searchBar"/>
-        <input type="submit" value="Go"/> 
-        <input type="submit" value="📍"/>
+        <input type="submit" value="Go" class="go"/> 
+        <input type="submit" value="📍" class="here"/>
     </form>
+    <br />
     <h1>
         London
     </h1>
     <h2>
         Mon 7th June, 2021, 14:00
     </h2>
+    <br />
 
     <div class="row">
         <div class="col-7">
@@ -34,43 +38,44 @@
 </h3>
         </div>
         <div class="col-5">
-        <h3>
+        <h3 class="currentWeatherTemp">
             21°C
         </h3>
         <ul>
-            <li>
-                wind: 2km/h
+            <li class="featureList">
+                wind: <span class="featureResult">2km/h</span>
             </li>
-            <li>
-                precipitation: 10%
+            <li class="featureList">
+                precipitation: <span class="featureResult">10%</span>
             </li>
-            <li>
-                humidity: 5%
+            <li class="featureList">
+                humidity: <span class="featureResult">5%</span>
             </li>
-            <a href="#">change to fahrenheit</a>
+            <br />
+            <a href="#" class="changeLink">change to fahrenheit</a>
             </ul>
         </div>
 <div class="row">
     <div class="col-2">
-        <p class="forecast">tomorrow</p><span class="forecastPic">☔️</span><br/><p>19°C</p></div>
+        <p class="forecastDay">tomorrow</p><span class="forecastPic">☔️</span><br/><p class="forecastTemp">19°C</p></div>
     <div class="col-2">
-        <p class="forecast">wednesday</p><span class="forecastPic">☔️</span><br />
-        <p>19°C</p>
+        <p class="forecastDay">wednesday</p><span class="forecastPic">☔️</span><br />
+        <p class="forecastTemp">19°C</p>
     </div>
     <div class="col-2">
-        <p class="forecast">thursday</p><span class="forecastPic">☔️</span><br />
-        <p>19°C</p>
+        <p class="forecastDay">thursday</p><span class="forecastPic">☔️</span><br />
+        <p class="forecastTemp">19°C</p>
     </div>
     <div class="col-2">
-        <p class="forecast">friday</p><span class="forecastPic">☔️</span><br />
-        <p>19°C</p>
+        <p class="forecastDay">friday</p><span class="forecastPic">☔️</span><br />
+        <p class="forecastTemp">19°C</p>
     </div>
-    <div class="col-2"> <p class="forecast">saturday</p><span class="forecastPic">☔️</span><br />
-    <p>19°C</p>
+    <div class="col-2"> <p class="forecastDay">saturday</p><span class="forecastPic">☔️</span><br />
+    <p class="forecastTemp">19°C</p>
 </div>
     <div class="col-2">
-        <p class="forecast">sunday</p><span class="forecastPic">☔️</span><br />
-        <p>19°C</p>
+        <p class="forecastDay">sunday</p><span class="forecastPic">☔️</span><br />
+        <p class="forecastTemp">19°C</p>
     </div>
 </div>
 
