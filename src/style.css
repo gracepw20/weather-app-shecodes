@@ -16,6 +16,13 @@ h2 {
 	text-align: center;
 }
 
+img {
+	width: 25%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 ul {
 	list-style: none;
 	text-align: center;
@@ -30,10 +37,16 @@ ul {
 	margin: 100px auto;
 }
 
+.searchBar {
+	font-family: "Slabo 27px", serif;
+}
+
 .go {
 	border-radius: 100%;
 	background-color: #92d1c3;
 	border: solid 2px #8bb8a8;
+	font-family: "Ultra", serif;
+	color: #ffd5ff;
 
 	transition: all 150ms ease-in-out;
 }
@@ -45,7 +58,6 @@ ul {
 
 .here {
 	border-radius: 100%;
-	text-align: center;
 	background-color: #ffd5ff;
 	border: solid 2px #b47eb3;
 
@@ -56,19 +68,18 @@ ul {
 	background-color: #b47eb3;
 	border: solid 2px #ffd5ff;
 }
-.currentWeatherPic {
-	font-size: 100px;
-}
+
 .currentWeatherDesc {
-	font-family: "Slabo 27px", serif;
-	font-size: 20px;
-	text-align: left;
+	font-family: "Ultra", serif;
+	font-size: 25px;
+	text-align: center;
 	color: #b47eb3;
 	font-weight: bold;
 	text-transform: capitalize;
 }
 
 .currentWeatherTemp {
+	font-size: 25px;
 	font-family: "Ultra", serif;
 	text-align: center;
 	color: #b47eb3;
@@ -97,9 +108,11 @@ ul {
 
 .forecastDay {
 	font-family: "Ultra", serif;
-	font-size: 15px;
+	font-size: 12px;
 	padding: 0;
 	color: #b47eb3;
+	text-align: center;
+	text-transform: capitalize;
 }
 
 .forecastPic {
