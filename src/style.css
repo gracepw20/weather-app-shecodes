@@ -85,6 +85,31 @@ ul {
 	color: #b47eb3;
 }
 
+.divider {
+	color: #92d1c3;
+}
+
+.fahrenheit,
+.celsius {
+	color: #b47eb3;
+	transition: all 150ms ease-in-out;
+}
+
+.fahrenheit:hover,
+.celsius:hover {
+	color: #ffd5ff;
+}
+
+.weather-temperature .active {
+	color: #b47eb3;
+	cursor: default;
+	text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+	text-decoration: none;
+}
+
 .featureList {
 	font-family: "Slabo 27px", serif;
 	color: #92d1c3;

@@ -31,6 +31,7 @@ dateElement.innerHTML = formatDate(response.data.dt * 1000)
 let iconElement = document.querySelector("#icon")
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 iconElement.setAttribute("alt", response.data.weather[0].description)
+celsiusTemperature = response.data.main.temp
 }
 
 function search(city) {
@@ -47,5 +48,34 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form")
 form.addEventListener("submit", handleSubmit)
+
+
+function displayFahrenheitTemperature(event) {
+    event.preventDefault()
+    let fahrenheitTemperature  = (celsiusTemperature * 9) / 5 + 32 
+    celsiusLink.classList.remove("active")
+    fahrenheitLink.classList.add("active")
+    let temperatureElement = document.querySelector("#current-temp")
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature)
+}
+
+function displayCelsiusTemperature(event) {
+    event.preventDefault()
+    celsiusLink.classList.add("active")
+    fahrenheitLink.classList.remove("active")
+    let temperatureElement = document.querySelector("#current-temp")
+    temperatureElement.innerHTML = Math.round(celsiusTemperature)
+
+}
+
+let celsiusTemperature = null;
+
+let celsiusLink = document.querySelector("#celsius-temperature")
+celsiusLink.addEventListener("click", displayCelsiusTemperature)
+
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link")
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
 
 search("London")
