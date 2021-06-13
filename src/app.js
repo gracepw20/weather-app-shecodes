@@ -28,10 +28,14 @@ let windElement = document.querySelector("#wind")
 windElement.innerHTML = Math.round(response.data.wind.speed)
 let dateElement = document.querySelector("#date")
 dateElement.innerHTML = formatDate(response.data.dt * 1000)
+let iconElement = document.querySelector("#icon")
+iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+iconElement.setAttribute("alt", response.data.weather[0].description)
 }
 
 
 let apiKey = "f94c6d984db626b788cf81becaec5145"
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`
+let city = "London"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
 
 axios.get(apiUrl).then(displayTemperature)
