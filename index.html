@@ -9,6 +9,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ultra&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <link rel="stylesheet" href="src/style.css" />
 </head>
 <body>
@@ -19,7 +20,7 @@
         <input type="submit" value="📍" class="here"/>
     </form>
     <br />
-    <h1>
+    <h1 id="current-city">
         London
     </h1>
     <h2>
@@ -33,23 +34,20 @@
     🌤
 </span>
 <br />
-<h3 class="currentWeatherDesc">
+<h3 class="currentWeatherDesc" id="current-desc">
     mostly sunny    
 </h3>
         </div>
         <div class="col-5">
-        <h3 class="currentWeatherTemp">
-            21°C
+        <h3 class="currentWeatherTemp"><span id="current-temp">
+            21</span>°C
         </h3>
         <ul>
             <li class="featureList">
-                wind: <span class="featureResult">2km/h</span>
+                wind: <span class="featureResult" id="wind">2</span> km/h
             </li>
             <li class="featureList">
-                precipitation: <span class="featureResult">10%</span>
-            </li>
-            <li class="featureList">
-                humidity: <span class="featureResult">5%</span>
+                humidity: <span class="featureResult" id="humidity">5</span>%
             </li>
             <br />
             <a href="#" class="changeLink">change to fahrenheit</a>

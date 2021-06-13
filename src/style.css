@@ -65,6 +65,7 @@ ul {
 	text-align: left;
 	color: #b47eb3;
 	font-weight: bold;
+	text-transform: capitalize;
 }
 
 .currentWeatherTemp {
