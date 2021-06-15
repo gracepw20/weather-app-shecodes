@@ -29,6 +29,10 @@ ul {
 	padding: 0;
 }
 
+p {
+	margin: 0 auto;
+}
+
 .app {
 	border: solid 5px #8bb8a8;
 	max-width: 700px;
@@ -149,6 +153,10 @@ ul {
 	color: #8bb8a8;
 	text-align: center;
 	font-size: 17px;
+}
+
+.weather-icon {
+	width: 50px;
 }
 
 .github {
