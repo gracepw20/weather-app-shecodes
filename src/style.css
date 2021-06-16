@@ -106,7 +106,7 @@ p {
 	font-family: "Slabo 27px", serif;
 	color: #92d1c3;
 	font-size: 19px;
-	line-height: 2em;
+	line-height: 1.9em;
 }
 
 .featureResult {
@@ -159,7 +159,7 @@ p {
 	padding: 15px 5px;
 	transition: all 150ms ease-in-out;
 	font-family: "Ultra", serif;
-	font-size: 25px;
+	font-size: 27px;
 	text-align: center;
 	color: #ffd5ff;
 	font-weight: bold;
