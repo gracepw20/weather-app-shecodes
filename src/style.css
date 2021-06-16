@@ -7,6 +7,7 @@ h1 {
 	font-size: 50px;
 	color: #b47eb3;
 	text-align: center;
+	letter-spacing: 3px;
 }
 
 h2 {
@@ -43,10 +44,13 @@ p {
 
 .searchBar {
 	font-family: "Slabo 27px", serif;
+	border-radius: 25px;
+	border: 2px solid #b47eb3;
+	padding: 1px 5px;
 }
 
 .go {
-	border-radius: 100%;
+	border-radius: 25px;
 	background-color: #92d1c3;
 	border: solid 2px #8bb8a8;
 	font-family: "Ultra", serif;
@@ -61,7 +65,7 @@ p {
 }
 
 .here {
-	border-radius: 100%;
+	border-radius: 25px;
 	background-color: #ffd5ff;
 	border: solid 2px #b47eb3;
 
@@ -71,22 +75,6 @@ p {
 .here:hover {
 	background-color: #b47eb3;
 	border: solid 2px #ffd5ff;
-}
-
-.currentWeatherDesc {
-	font-family: "Ultra", serif;
-	font-size: 25px;
-	text-align: center;
-	color: #b47eb3;
-	font-weight: bold;
-	text-transform: capitalize;
-}
-
-.currentWeatherTemp {
-	font-size: 25px;
-	font-family: "Ultra", serif;
-	text-align: center;
-	color: #b47eb3;
 }
 
 .divider {
@@ -117,6 +105,8 @@ p {
 .featureList {
 	font-family: "Slabo 27px", serif;
 	color: #92d1c3;
+	font-size: 19px;
+	line-height: 2em;
 }
 
 .featureResult {
@@ -144,10 +134,6 @@ p {
 	text-transform: capitalize;
 }
 
-.forecastPic {
-	text-align: center;
-}
-
 .forecastTemp {
 	font-family: "Slabo 27px", serif;
 	color: #8bb8a8;
@@ -156,11 +142,57 @@ p {
 }
 
 .weather-icon {
-	width: 50px;
+	width: 90px;
 }
 
 .github {
 	text-align: center;
 	font-family: "Slabo 27px", serif;
 	font-size: 14px;
+}
+
+.weather-frame {
+	margin: 10px 5px;
+	background-color: #8bb8a8;
+	border: solid 4px #ffd5ff;
+	border-radius: 25px;
+	padding: 15px 5px;
+	transition: all 150ms ease-in-out;
+	font-family: "Ultra", serif;
+	font-size: 25px;
+	text-align: center;
+	color: #ffd5ff;
+	font-weight: bold;
+	text-transform: capitalize;
+	letter-spacing: 0.2em;
+}
+
+.weather-frame:hover {
+	background-color: #ffd5ff;
+	border: solid 4px #8bb8a8;
+	color: #8bb8a8;
+}
+
+.forecast-info-frame {
+	margin: 10px 5px;
+	background-color: #ffd5ff;
+	border: solid 4px #8bb8a8;
+	border-radius: 25px;
+	padding: 15px 5px;
+	font-size: 25px;
+	font-family: "Ultra", serif;
+	text-align: center;
+
+	letter-spacing: 0.2em;
+	font-size: 25px;
+	font-family: "Ultra", serif;
+	text-align: center;
+	color: #b47eb3;
+	letter-spacing: 3px;
+}
+
+.forecast-info-frame:hover {
+	background-color: #8bb8a8;
+	border: solid 4px #ffd5ff;
+	color: #ffd5ff;
 }
