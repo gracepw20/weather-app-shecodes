@@ -91,32 +91,17 @@ let form = document.querySelector("#search-form")
 form.addEventListener("submit", handleSubmit)
 
 
-function displayFahrenheitTemperature(event) {
-    event.preventDefault()
-    let fahrenheitTemperature  = (celsiusTemperature * 9) / 5 + 32 
-    celsiusLink.classList.remove("active")
-    fahrenheitLink.classList.add("active")
-    let temperatureElement = document.querySelector("#current-temp")
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature)
+function searchLocation(position) {
+   let apiKey = "f7c59c83e4191d0c4f2a6496b307d2e1"
+   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`
+   axios.get(apiUrl).then(displayTemperature)
 }
 
-function displayCelsiusTemperature(event) {
-    event.preventDefault()
-    celsiusLink.classList.add("active")
-    fahrenheitLink.classList.remove("active")
-    let temperatureElement = document.querySelector("#current-temp")
-    temperatureElement.innerHTML = Math.round(celsiusTemperature)
-
+function getCurrentLocation(event) {
+  event.preventDefault()
+  navigator.geolocation.getCurrentPosition(searchLocation)
 }
-
-let celsiusTemperature = null;
-
-let celsiusLink = document.querySelector("#celsius-temperature")
-celsiusLink.addEventListener("click", displayCelsiusTemperature)
-
-
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link")
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
+let currentLocationButton = document.querySelector("#current-location-button")
+currentLocationButton.addEventListener("click", getCurrentLocation)
 
 search("London")
