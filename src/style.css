@@ -35,11 +35,12 @@ p {
 }
 
 .app {
-	border: solid 5px #8bb8a8;
+	border: solid 10px #8bb8a8;
 	max-width: 700px;
 	background-color: #fdf5bf;
 	padding: 25px;
 	margin: 100px auto;
+	border-radius: 25px;
 }
 
 .searchBar {
